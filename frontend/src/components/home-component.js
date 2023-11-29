@@ -8,7 +8,7 @@ import axios from "axios";
 import "../styles/home.css";
 
 const HomeComponent = () => {
-  const client_URL = "http://localhost:3000";
+  const client_URL = "https://ece9065group3.vercel.app";
   const BASE_URL = "https://ece9065group3api-51579a5ffecb.herokuapp.com/api";
   const USER_URL = `${BASE_URL}/auth/users`;
   // let [registerModalVisible, setRegisterModalVisible] = useState(false);
