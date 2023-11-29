@@ -1,0 +1,35 @@
+.container {
+  margin: 5rem 20em;
+}
+
+.book-container {
+  display: flex;
+}
+
+.img-container {
+  height: 80vh;
+  flex: 1;
+  margin-right: 10rem;
+  flex-grow: 1;
+  /* add a border; */
+  border: 2px solid #efebeb;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+img {
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.details-container {
+  flex: 2;
+}
+
+.description {
+  margin-top: 20px;
+}
+
+.btn {
+  margin-top: 20px;
+}

@@ -1,0 +1,9 @@
+.grid-container {
+  display: flex;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 3rem;
+  margin: 5rem auto;
+  max-width: 80vw;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
