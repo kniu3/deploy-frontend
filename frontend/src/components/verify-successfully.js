@@ -26,7 +26,7 @@ const VerifySuccessfully = () => {
     return (
       <div className="container">
         <h1>Verify Successfully</h1>
-      </div>
+      </div> 
     );
   };
 
