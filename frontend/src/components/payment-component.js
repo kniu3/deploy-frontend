@@ -70,7 +70,7 @@ const PaymentComponent = () => {
                     <td>{book.title}</td>
                     <td>
                       {book.salePrice.amount === "N/A"
-                        ? "$ 0.00(Free)"
+                        ? "$ 0.00 (Free)"
                         : `$ ${book.salePrice.amount}`}
                     </td>
                   </tr>
@@ -86,7 +86,7 @@ const PaymentComponent = () => {
                   <h5>Subtotal:</h5>
                 </td>
                 <td>
-                  <h5>$ {subTotal()}</h5>
+                  <h5>$ {subTotal().toFixed(2)}</h5>
                 </td>
               </tr>
               <tr>

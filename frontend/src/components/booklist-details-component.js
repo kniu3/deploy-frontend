@@ -269,7 +269,7 @@ const BookListDetailsComponent = (prop) => {
             {console.log(reviewList)}
             {reviewList &&
               reviewList.map((review) => (
-                <ReviewCardComponent key={review._id} review={review} />
+                <ReviewCardComponent key={review._id} review={review} currentUser={currentUser} />
               ))}
           </div>
         )}

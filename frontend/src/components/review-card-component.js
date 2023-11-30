@@ -3,6 +3,7 @@ import ReviewsService from "../services/reviews.service";
 
 const ReviewCardComponent = (prop) => {
   const review = prop.review;
+  const currentUser = prop.currentUser;
 
   const handleHideReview = () => {
     ReviewsService.hideReview(review._id)
@@ -13,7 +14,6 @@ const ReviewCardComponent = (prop) => {
       .catch((error) => {
         console.log(error);
       });
-    
   };
   return (
     <div className="border rounded p-3 mb-3">
@@ -24,10 +24,15 @@ const ReviewCardComponent = (prop) => {
           " " +
           review.date.split("T")[1].slice(0, 5)}
       </p>
-      <small>Inappropriate?</small>
-      <button className="btn btn-outline-dark" onDoubleClick={handleHideReview}>
-        Hide
-      </button>
+
+      {currentUser && currentUser.user.role === "manager" && (
+        <div className="d-flex flex-column">
+          <small>Inappropriate?</small>
+          <button className="btn btn-outline-danger" onClick={handleHideReview}>
+            Hide
+          </button>
+        </div>
+      )}
     </div>
   );
 };
