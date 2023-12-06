@@ -152,7 +152,7 @@ const PaymentComponent = () => {
           </div>
           <div className="form-floating mb-3">
             <input
-              type="text"
+              type="number"
               name="expiry"
               placeholder="MM/YY Expiry"
               value={state.expiry}
@@ -166,6 +166,7 @@ const PaymentComponent = () => {
             <input
               type="number"
               name="cvc"
+              maxlength="3"
               placeholder="CVC"
               value={state.cvc}
               onChange={handleInputChange}

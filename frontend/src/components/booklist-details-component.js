@@ -40,12 +40,15 @@ const BookListDetailsComponent = (prop) => {
 
     ReviewsService.getReviews(bookListId)
       .then((response) => {
+        console.log(response.data);
         setReviewList(response.data);
       })
       .catch((error) => {
         console.log(error);
       });
   }, []);
+
+
 
   const handleBookListNameChange = (e) => {
     setBookListName(e.target.value);
