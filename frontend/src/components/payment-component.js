@@ -125,6 +125,7 @@ const PaymentComponent = () => {
               type="number"
               name="number"
               id="card number"
+              maxLength="16"
               placeholder="Card Number"
               value={state.number}
               onChange={handleInputChange}
@@ -154,6 +155,7 @@ const PaymentComponent = () => {
             <input
               type="number"
               name="expiry"
+              maxLength="4"
               placeholder="MM/YY Expiry"
               value={state.expiry}
               onChange={handleInputChange}
@@ -166,7 +168,7 @@ const PaymentComponent = () => {
             <input
               type="number"
               name="cvc"
-              maxlength="3"
+              maxLength="3"
               placeholder="CVC"
               value={state.cvc}
               onChange={handleInputChange}
